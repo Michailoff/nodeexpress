@@ -9,12 +9,20 @@ let listProducts = [
   {
     id: 1,
     name: 'Product 1',
-    price: 10
+    price: 10,
+    description: "descricao produto um"
   },
   {
     id: 2,
     name: 'Product 2',
-    price: 100
+    price: 100,
+    description: "descricao produto dois"
+  },
+    {
+    id: 3,
+    name: 'Product 3',
+    price: 100,
+    description: "descricao produto tres"
   }
 ];
 
@@ -43,7 +51,9 @@ app.get('/products', (req, res) => {
 app.get('/contact', (req, res) => {
   res.render('contact.html');
 });
-
+app.get('/mateus', (req, res) => {
+  res.render('mateus.html');
+});
 app.post('/send', (req, res) => {
   var email = 'artur.nzk@gmail.com';
   const transporter = nodemailer.createTransport({
